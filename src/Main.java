@@ -7,11 +7,11 @@ import java.util.Random;
 public class Main {
     public static void main (String [ ] args) {
 
-        //GenerarMatrizEnTripletasYForma2Aleatoria(3, 9);
-
+        //GenerarMatrizEnTripletasYForma2Aleatoria(250, 70);
         GenerarMatrizEnTripletasYForma2Manualmente();
 
     }
+
     //Metodo que genera dos matrices iguales de manera aleatoria.
     public static void GenerarMatrizEnTripletasYForma2Aleatoria(int dimension, int elementos){
         MatrizEnTripleta m;
@@ -53,11 +53,11 @@ public class Main {
         comparar(m, a);
     }
 
-    //Metodo que genera las matrices ingresadas de manera manual.
+    //Metodo que genera dos matrices ingresadas de manera manual.
     public static void GenerarMatrizEnTripletasYForma2Manualmente(){
         MatrizEnTripleta m;
         Tripleta tx;
-        Tripleta t = new Tripleta(5, 5, 0);
+        Tripleta t = new Tripleta(210, 210, 0);
         m = new MatrizEnTripleta(t);
 
         tx = new Tripleta(1, 2, 3);
@@ -77,7 +77,7 @@ public class Main {
 
 
         MatrizForma2 a;
-        a=new MatrizForma2(5, 5);
+        a=new MatrizForma2(210, 210);
         Tripleta c=new Tripleta(1,2,3);
         NodoDoble h=new NodoDoble(c);
         a.conecta(h);
@@ -99,6 +99,7 @@ public class Main {
         comparar(m, a);
     }
 
+    //Metodo que compara si dos matrices son iguales o diferentes.
     public static void comparar(MatrizEnTripleta MatrizA, MatrizForma2 MatrizB2){
         //Primero comparamos si las dos matrices tienen la misma cantidad de filas, columnas y elementos diferentes de cero.
         int numeroFilasA=MatrizA.v[0].retornaFila();
@@ -131,11 +132,11 @@ public class Main {
                 System.out.println("Comparamos laos datos: "+valorActualEnA+" y "+valorActualEnB);
                  */
                 if (!(filaActualEnA==filaActualEnB && columnaActualEnA==columnaActualEnB && valorActualEnA==valorActualEnB)){
-                    System.out.println("Las matrices son diferentes.");
+                    System.out.println("\n Las matrices son diferentes.");
                     return;
                 }
             }
-            System.out.println("Las matrices son iguales.");
+            System.out.println("\n Las matrices son iguales.");
         }
         else {
             System.out.println("\n Las matrices son diferentes.");

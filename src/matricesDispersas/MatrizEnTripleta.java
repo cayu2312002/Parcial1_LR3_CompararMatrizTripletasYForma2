@@ -189,5 +189,4 @@ public class MatrizEnTripleta {
             return t.retornaValor();
         }
     }
-
 }
